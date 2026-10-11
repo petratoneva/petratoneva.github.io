@@ -4,70 +4,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Petra Toneva | Research & Culture</title>
   <meta name="description" content="Petra Toneva is an interdisciplinary researcher and cultural manager working across environmental science, remote sensing, sustainability and cinema.">
 
   <style>
+    :root {
+      --background: #faf9f6;
+      --text: #292929;
+      --muted: #77736d;
+      --accent: #346b5b;
+      --line: #e6e2da;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 760px;
-      margin: 90px auto;
-      padding: 0 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 64px 28px;
       line-height: 1.8;
-      color: #292929;
-      background: #faf9f6;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    h1, h2 {
+      line-height: 1.3;
+      font-weight: 600;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 4px;
-    }
-
-    .subtitle {
-      color: #777;
-      margin-top: 0;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      letter-spacing: -1.5px;
+      margin: 0 0 8px;
     }
 
     h2 {
-      margin-top: 42px;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
+      margin: 0 0 18px;
+    }
+
+    p {
+      margin: 0 0 18px;
     }
 
     a {
-      color: #346b5b;
-    }
-
-    nav {
-      margin: 24px 0 40px;
-    }
-
-    nav a {
-      margin-right: 18px;
+      color: var(--accent);
       text-decoration: none;
     }
 
-    nav a:hover {
+    a:hover {
       text-decoration: underline;
     }
 
-    footer {
-      margin-top: 60px;
-      color: #777;
-      font-size: 0.9rem;
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0;
     }
 
-    @media (max-width: 600px) {
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 22px 0;
+      margin: 34px 0 42px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav a {
+      font-size: 0.95rem;
+    }
+
+    /* Intro: bio on the left, portrait on the right */
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 250px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .intro-text {
+      padding-top: 8px;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 4px;
+    }
+
+    .photo-caption {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    section {
+      margin-top: 58px;
+      scroll-margin-top: 24px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      padding-left: 4px;
+      margin-bottom: 8px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+    }
+
+    footer {
+      margin-top: 72px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 650px) {
       body {
-        margin-top: 40px;
+        padding: 36px 22px;
       }
 
-      h1 {
-        font-size: 2rem;
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 28px;
       }
 
-      nav a {
-        display: inline-block;
-        margin-bottom: 8px;
+      .profile {
+        max-width: 260px;
+        grid-row: 1;
+      }
+
+      .profile-photo {
+        aspect-ratio: 4 / 5;
+      }
+
+      nav {
+        gap: 14px 20px;
+        margin: 26px 0 32px;
+      }
+
+      section {
+        margin-top: 44px;
       }
     }
   </style>
@@ -79,52 +176,70 @@
     <p class="subtitle">Research · Sustainability · Culture</p>
   </header>
 
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#culture">Cultural work</a>
+    <a href="#research">Research & Projects</a>
+    <a href="#culture">Cultural Work</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <main>
-    <section id="about">
-      <h2>About</h2>
+    <section id="about" class="intro">
+      <div class="intro-text">
+        <h2>About</h2>
 
-      <p>
-        I am an interdisciplinary researcher and cultural manager
-        working at the intersection of environmental science,
-        technology, and community-led cultural initiatives.
-        In Iceland, my work has spanned remote sensing and
-        environmental monitoring, sustainability, and biotechnology.
-        I am a recent graduate of the Environment and Natural
-        Resources programme at the University of Iceland.
-      </p>
+        <p>
+          I am an interdisciplinary researcher and cultural manager
+          working at the intersection of environmental science,
+          technology, and community-led cultural initiatives.
+          In Iceland, my work has spanned remote sensing and
+          environmental monitoring, sustainability, and biotechnology.
+          I am a recent graduate of the Environment and Natural
+          Resources programme at the University of Iceland.
+        </p>
 
-      <p>
-        As co-founder of the Luminary Cinema Foundation, I work
-        to expand access to cinema and culture in rural and
-        isolated communities, currently reaching audiences
-        across 20 villages in Bulgaria.
-      </p>
+        <p>
+          As co-founder of the Luminary Cinema Foundation, I work
+          to expand access to cinema and culture in rural and
+          isolated communities, currently reaching audiences
+          across 20 villages in Bulgaria.
+        </p>
+
+        <p>
+          My interests include Earth observation, interdisciplinary
+          research, cultural decentralisation, and international
+          collaboration.
+        </p>
+      </div>
+
+      <div class="profile">
+        <img
+          src="petra.jpg"
+          alt="Portrait of Petra Toneva"
+          class="profile-photo"
+        >
+        <p class="photo-caption">Researcher & cultural manager</p>
+      </div>
     </section>
 
     <section id="research">
       <h2>Research & Projects</h2>
 
       <p>
-        My research interests include Earth observation, GIS,
-        environmental monitoring, invasive species mapping,
-        and sustainability assessment.
+        My environmental research focuses on applying geospatial
+        technologies and data-driven methods to environmental
+        monitoring and sustainability challenges.
       </p>
 
       <ul>
-        <li>Remote sensing and invasive species mapping</li>
-        <li>Biocapacity and ecological footprint accounting</li>
-        <li>Earth observation for environmental applications</li>
+        <li>Remote sensing and machine learning for invasive species mapping</li>
+        <li>Wetlands, biocapacity and ecological footprint accounting</li>
+        <li>GIS, Earth observation and environmental applications</li>
       </ul>
 
       <p>
-        <a href="https://github.com/petratoneva/">
+        <a href="https://github.com/petratoneva/"
+           target="_blank" rel="noopener noreferrer">
           Explore my GitHub projects →
         </a>
       </p>
@@ -141,8 +256,9 @@
       </p>
 
       <p>
-        My work focuses on cultural access, community engagement,
-        and international collaboration.
+        My work brings together local cultural organisations,
+        filmmakers, artists, and communities to make cultural
+        experiences more accessible beyond major urban centres.
       </p>
     </section>
 
@@ -150,25 +266,23 @@
       <h2>Contact</h2>
 
       <p>
-        Email:
-        <a href="mailto:petra.toneva@gmail.com">
-          petra.toneva@gmail.com
-        </a>
+        I welcome conversations about research, environmental
+        projects, cultural initiatives, and potential collaborations.
       </p>
 
-      <p>
+      <div class="contact-links">
+        <a href="mailto:petra.toneva@gmail.com">Email ↗</a>
+
         <a href="https://www.linkedin.com/in/petra-toneva/"
            target="_blank" rel="noopener noreferrer">
-          LinkedIn →
+          LinkedIn ↗
         </a>
-      </p>
 
-      <p>
         <a href="https://github.com/petratoneva/"
            target="_blank" rel="noopener noreferrer">
-          GitHub →
+          GitHub ↗
         </a>
-      </p>
+      </div>
     </section>
   </main>
 
