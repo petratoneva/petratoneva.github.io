@@ -70,12 +70,10 @@ a:hover {
 .sidebar-photo {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: 50% 40%;
-  border-radius: 50%;
-  border: 6px solid var(--surface);
-  box-shadow: 0 0 0 1px var(--line);
+  border-radius: 4px;
   margin-bottom: 22px;
 }
 
@@ -228,6 +226,34 @@ h2 + .list-heading {
   margin-top: 8px;
 }
 
+.item-title a {
+  color: var(--text);
+}
+
+.item-title a:hover {
+  color: var(--accent);
+}
+
+.item-title .ext {
+  color: var(--accent);
+  font-weight: 400;
+  font-size: 0.85em;
+}
+
+/* Lists with a year column (Events page) */
+.item-list.dated-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto) 3.5rem;
+  gap: 2px 24px;
+  align-items: baseline;
+}
+
+.item-year {
+  color: var(--muted);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
 /* ---------- Research projects ---------- */
 .project-list {
   margin: 28px 0 0;
@@ -364,7 +390,6 @@ footer {
 
   .sidebar-photo {
     grid-row: span 2;
-    border-width: 3px;
     margin: 0;
   }
 
@@ -410,6 +435,14 @@ footer {
 
   .item-detail {
     text-align: left;
+  }
+
+  .item-list.dated-list li {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .dated-list .item-title {
+    grid-column: 1 / -1;
   }
 
   .gallery {
