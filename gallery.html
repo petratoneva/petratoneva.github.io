@@ -64,56 +64,102 @@
 
           <!--
             To add a photo:
-            1. Put the image in a folder called "gallery" next to this file.
-            2. Copy this block into the <div class="gallery"> below:
+            1. Put the image in the "gallery" folder.
+            2. Copy this block into <div class="gallery"> below, in the
+               position where you want it in the carousel:
 
             <figure>
               <a href="gallery/photo-name.jpg">
-                <img src="gallery/photo-name.jpg" alt="Short description of the photo" loading="lazy">
+                <img src="gallery/photo-name.jpg" alt="Short description of the photo">
               </a>
               <figcaption>Caption · Place, year</figcaption>
             </figure>
 
-            Clicking a photo opens it full size on top of the page.
+            Arrows, counter and thumbnails update automatically.
           -->
 
-          <div class="gallery">
-            <figure>
-              <a href="gallery/ARCADE%20in%20Ilulissat%2C%202026%2C%20Greenland.jpg">
-                <img src="gallery/ARCADE%20in%20Ilulissat%2C%202026%2C%20Greenland.jpg" alt="ARCADE programme in Ilulissat, Greenland" loading="lazy">
-              </a>
-              <figcaption>ARCADE in Ilulissat · Greenland, 2026</figcaption>
-            </figure>
-
+          <div class="carousel" aria-roledescription="carousel" aria-label="Photo gallery">
+            <div class="gallery" tabindex="0">
             <figure>
               <a href="gallery/MSc%20Graduation%2C%202026%2C%20Iceland.jpg">
-                <img src="gallery/MSc%20Graduation%2C%202026%2C%20Iceland.jpg" alt="MSc graduation in Iceland" loading="lazy">
+                <img src="gallery/MSc%20Graduation%2C%202026%2C%20Iceland.jpg" alt="MSc graduation in Iceland">
               </a>
               <figcaption>MSc Graduation · Iceland, 2026</figcaption>
             </figure>
 
             <figure>
+              <a href="gallery/Copernicus%20Ocean%20Hackathon%20work%20session%2C%202026%2C%20Iceland.jpg">
+                <img src="gallery/Copernicus%20Ocean%20Hackathon%20work%20session%2C%202026%2C%20Iceland.jpg" alt="Copernicus Ocean Hackathon work session in Iceland">
+              </a>
+              <figcaption>Copernicus Ocean Hackathon work session · Iceland, 2026</figcaption>
+            </figure>
+
+            <figure>
+              <a href="gallery/Bologna%20Innovation%20Lab%2C%202026%2C%20Italy.jpg">
+                <img src="gallery/Bologna%20Innovation%20Lab%2C%202026%2C%20Italy.jpg" alt="Bologna Innovation Lab in Italy">
+              </a>
+              <figcaption>Bologna Innovation Lab · Italy, 2026</figcaption>
+            </figure>
+
+            <figure>
+              <a href="gallery/ARCADE%20in%20Ilulissat%2C%202026%2C%20Greenland.jpg">
+                <img src="gallery/ARCADE%20in%20Ilulissat%2C%202026%2C%20Greenland.jpg" alt="ARCADE programme in Ilulissat, Greenland">
+              </a>
+              <figcaption>ARCADE in Ilulissat · Greenland, 2026</figcaption>
+            </figure>
+
+            <figure>
+              <a href="gallery/ARCADE%20in%20Nuuk%2C%202026%2C%20Greenland.jpg">
+                <img src="gallery/ARCADE%20in%20Nuuk%2C%202026%2C%20Greenland.jpg" alt="ARCADE programme in Nuuk, Greenland">
+              </a>
+              <figcaption>ARCADE in Nuuk · Greenland, 2026</figcaption>
+            </figure>
+
+            <figure>
+              <a href="gallery/ENR%20Graduate%20Presentations%2C%202026%2C%20Iceland.jpg">
+                <img src="gallery/ENR%20Graduate%20Presentations%2C%202026%2C%20Iceland.jpg" alt="Environment and Natural Resources graduate presentations in Iceland">
+              </a>
+              <figcaption>ENR Graduate Presentations · Iceland, 2026</figcaption>
+            </figure>
+
+            <figure>
               <a href="gallery/Cinema%20in%20the%20Village%20Kick-off%2C%202025%2C%20Bulgaria.jpg">
-                <img src="gallery/Cinema%20in%20the%20Village%20Kick-off%2C%202025%2C%20Bulgaria.jpg" alt="Kick-off of Cinema in the Village in Bulgaria" loading="lazy">
+                <img src="gallery/Cinema%20in%20the%20Village%20Kick-off%2C%202025%2C%20Bulgaria.jpg" alt="Kick-off of Cinema in the Village in Bulgaria">
               </a>
               <figcaption>Cinema in the Village Kick-off · Bulgaria, 2025</figcaption>
             </figure>
 
             <figure>
               <a href="gallery/Cinema%20in%20the%20Village%20in%20Dolni%20Vadin%2C%202025%2C%20Bulgaria.jpg">
-                <img src="gallery/Cinema%20in%20the%20Village%20in%20Dolni%20Vadin%2C%202025%2C%20Bulgaria.jpg" alt="Cinema in the Village screening in Dolni Vadin, Bulgaria" loading="lazy">
+                <img src="gallery/Cinema%20in%20the%20Village%20in%20Dolni%20Vadin%2C%202025%2C%20Bulgaria.jpg" alt="Cinema in the Village screening in Dolni Vadin, Bulgaria">
               </a>
               <figcaption>Cinema in the Village in Dolni Vadin · Bulgaria, 2025</figcaption>
             </figure>
 
             <figure>
               <a href="gallery/Wetland%20fieldwork%20day%2C%202025%2C%20Iceland.jpeg">
-                <img src="gallery/Wetland%20fieldwork%20day%2C%202025%2C%20Iceland.jpeg" alt="Wetland fieldwork in Iceland" loading="lazy">
+                <img src="gallery/Wetland%20fieldwork%20day%2C%202025%2C%20Iceland.jpeg" alt="Wetland fieldwork in Iceland">
               </a>
               <figcaption>Wetland fieldwork day · Iceland, 2025</figcaption>
             </figure>
 
+            <figure>
+              <a href="gallery/Rural%20Innovation%2C%202024%2C%20Croatia.jpg">
+                <img src="gallery/Rural%20Innovation%2C%202024%2C%20Croatia.jpg" alt="Rural Innovation event in Croatia">
+              </a>
+              <figcaption>Rural Innovation · Croatia, 2024</figcaption>
+            </figure>
+            </div>
+
+            <button class="carousel-btn carousel-prev" type="button" aria-label="Previous photo">‹</button>
+            <button class="carousel-btn carousel-next" type="button" aria-label="Next photo">›</button>
           </div>
+
+          <div class="carousel-bar">
+            <span class="carousel-count" aria-live="polite"></span>
+          </div>
+
+          <div class="carousel-thumbs" aria-label="Choose a photo"></div>
         </section>
       </main>
 
@@ -124,43 +170,89 @@
 
   </div>
 
-  <!-- Full-size photo viewer -->
-  <dialog class="lightbox" aria-label="Photo viewer">
-    <img src="" alt="">
-    <div class="lightbox-bar">
-      <span class="lightbox-caption"></span>
-      <button class="lightbox-close" type="button" aria-label="Close">×</button>
-    </div>
-  </dialog>
-
   <script>
+    // Photo carousel: builds arrows, counter and thumbnails from the <figure> blocks
     (function () {
-      var dialog = document.querySelector('.lightbox');
-      if (!dialog || typeof dialog.showModal !== 'function') return;
+      var track = document.querySelector('.gallery');
+      if (!track) return;
 
-      var img = dialog.querySelector('img');
-      var caption = dialog.querySelector('.lightbox-caption');
+      var slides = Array.prototype.slice.call(track.querySelectorAll('figure'));
+      var prev = document.querySelector('.carousel-prev');
+      var next = document.querySelector('.carousel-next');
+      var count = document.querySelector('.carousel-count');
+      var thumbs = document.querySelector('.carousel-thumbs');
+      var current = 0;
 
-      document.querySelectorAll('.gallery a').forEach(function (link) {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          var thumb = link.querySelector('img');
-          var figcaption = link.parentElement.querySelector('figcaption');
-          img.src = link.href;
-          img.alt = thumb ? thumb.alt : '';
-          caption.textContent = figcaption ? figcaption.textContent : '';
-          dialog.showModal();
+      if (slides.length < 2) {
+        prev.hidden = true;
+        next.hidden = true;
+      }
+
+      // Clicking a photo opens the original in a new tab
+      track.querySelectorAll('a').forEach(function (a) {
+        a.target = '_blank';
+        a.rel = 'noopener';
+      });
+
+      // Thumbnails
+      var thumbButtons = slides.map(function (slide, i) {
+        var img = slide.querySelector('img');
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'carousel-thumb';
+        b.setAttribute('aria-label', 'Show photo ' + (i + 1));
+        var t = document.createElement('img');
+        t.src = img.getAttribute('src');
+        t.alt = '';
+        t.loading = 'lazy';
+        b.appendChild(t);
+        b.addEventListener('click', function () { go(i); });
+        thumbs.appendChild(b);
+        return b;
+      });
+
+      function go(i) {
+        var n = slides.length;
+        i = (i + n) % n;                       // wrap around at the ends
+        track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+      }
+
+      function update() {
+        var i = Math.round(track.scrollLeft / track.clientWidth);
+        if (i === current && count.textContent) return;
+        current = Math.max(0, Math.min(slides.length - 1, i));
+        count.textContent = (current + 1) + ' / ' + slides.length;
+        thumbButtons.forEach(function (b, j) {
+          b.classList.toggle('is-active', j === current);
+          b.setAttribute('aria-current', j === current ? 'true' : 'false');
         });
+        var active = thumbButtons[current];
+        if (active) {
+          var tr = thumbs.getBoundingClientRect();
+          var ar = active.getBoundingClientRect();
+          var left = thumbs.scrollLeft + (ar.left - tr.left) - (thumbs.clientWidth - ar.width) / 2;
+          thumbs.scrollTo({ left: left, behavior: 'smooth' });
+        }
+      }
+
+      prev.addEventListener('click', function () { go(current - 1); });
+      next.addEventListener('click', function () { go(current + 1); });
+
+      track.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); }
       });
 
-      dialog.querySelector('.lightbox-close').addEventListener('click', function () {
-        dialog.close();
+      var timer;
+      track.addEventListener('scroll', function () {
+        clearTimeout(timer);
+        timer = setTimeout(update, 60);
+      });
+      window.addEventListener('resize', function () {
+        track.scrollLeft = current * track.clientWidth;
       });
 
-      // Close when clicking the dark backdrop
-      dialog.addEventListener('click', function (e) {
-        if (e.target === dialog) dialog.close();
-      });
+      update();
     })();
   </script>
 </body>
