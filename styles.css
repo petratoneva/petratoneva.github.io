@@ -73,7 +73,7 @@ a:hover {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: 50% 40%;
-  border-radius: 4px;
+  border-radius: 0;
   margin-bottom: 22px;
 }
 
@@ -184,7 +184,10 @@ li {
   color: var(--muted);
 }
 
-/* ---------- Item lists (education, events, training) ---------- */
+/* ---------- Item lists (education, events, training) ----------
+   Every row uses the same three columns, so names, details and years
+   line up down the whole page. All text is left-aligned and uses the
+   same size, weight and colour. */
 .item-list {
   list-style: none;
   padding: 0;
@@ -192,26 +195,43 @@ li {
 }
 
 .item-list li {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 4fr) 3.5rem;
   gap: 2px 24px;
+  align-items: baseline;
   padding: 12px 0;
   margin: 0;
   border-top: 1px solid var(--line);
+  text-align: left;
 }
 
 .item-list li:last-child {
   border-bottom: 1px solid var(--line);
 }
 
-.item-title {
-  font-weight: 600;
+.item-title,
+.item-detail,
+.item-year {
+  font-weight: 400;
+  color: var(--text);
+  text-align: left;
 }
 
-.item-detail {
-  color: var(--muted);
-  text-align: right;
+.item-year {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Linked names look like the rest; only the small arrow marks a link */
+.item-title a {
+  color: inherit;
+}
+
+.item-title a:hover {
+  text-decoration: underline;
+}
+
+.item-title .ext {
+  font-size: 0.85em;
 }
 
 .list-heading {
@@ -224,34 +244,6 @@ li {
 
 h2 + .list-heading {
   margin-top: 8px;
-}
-
-.item-title a {
-  color: var(--text);
-}
-
-.item-title a:hover {
-  color: var(--accent);
-}
-
-.item-title .ext {
-  color: var(--accent);
-  font-weight: 400;
-  font-size: 0.85em;
-}
-
-/* Lists with a year column (Events page) */
-.item-list.dated-list li {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, auto) 3.5rem;
-  gap: 2px 24px;
-  align-items: baseline;
-}
-
-.item-year {
-  color: var(--muted);
-  text-align: right;
-  font-variant-numeric: tabular-nums;
 }
 
 /* ---------- Research projects ---------- */
@@ -430,18 +422,10 @@ footer {
   }
 
   .item-list li {
-    flex-direction: column;
+    grid-template-columns: minmax(0, 1fr) 3.5rem;
   }
 
-  .item-detail {
-    text-align: left;
-  }
-
-  .item-list.dated-list li {
-    grid-template-columns: minmax(0, 1fr) auto;
-  }
-
-  .dated-list .item-title {
+  .item-title {
     grid-column: 1 / -1;
   }
 
